@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/</Support>
   <Project>https://steampowered.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install Palworld and run it.&#xD;
 &#xD;

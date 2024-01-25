@@ -15,9 +15,12 @@
 **Password:** Docker  &#xD;
 &#xD;
 **Configuration:** The configuration is located at: ./enshrouded_server.json. &#xD;
-    To change server name and password, you must edit the enshrouded_server.json that you either precreate or let the game create on first launch. &#xD;
+&#xD;
+To change server name and password, you must edit the enshrouded_server.json that you either precreate or let the game create it on first launch.&#xD;
 &#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+DO NOT EDIT IP IN CONFIG FILE&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -29,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1706127375</DateInstalled>
+  <DateInstalled>1706153223</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>

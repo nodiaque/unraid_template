@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/avatar.png</Icon>
+  <Profile>
+    Creating Containers to benefit the Unraid Community
+  </Profile>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+</Maintainer>

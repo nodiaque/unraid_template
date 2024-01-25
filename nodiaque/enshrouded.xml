@@ -15,6 +15,7 @@
 **Password:** Docker  &#xD;
 &#xD;
 **Configuration:** The configuration is located at: ./enshrouded_server.json. &#xD;
+    To change server name and password, you must edit the enshrouded_server.json that you either precreate or let the game create on first launch. &#xD;
 &#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;

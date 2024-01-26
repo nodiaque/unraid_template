@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Enshrouded</Name>
-  <Repository>nodiaque/steamcmd:enshrouded_</Repository>
+  <Repository>nodiaque/steamcmd:enshrouded</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>

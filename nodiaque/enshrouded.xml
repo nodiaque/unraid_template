@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/</Support>
   <Project>https://steampowered.com/</Project>
-  <Overview>This Docker will download and install SteamCMD. It will also install Palworld and run it.&#xD;
+  <Overview>This Docker will download and install SteamCMD. It will also install Enshrouded and run it.&#xD;
 &#xD;
 **Server Name:** Enshrouded Docker  &#xD;
 **Password:** Docker  &#xD;

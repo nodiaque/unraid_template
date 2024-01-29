@@ -18,8 +18,6 @@
 &#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-Variable will overwrite setting in config file&#xD;
-&#xD;
 DO NOT EDIT IP IN CONFIG FILE&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;

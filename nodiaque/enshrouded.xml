@@ -4,6 +4,7 @@
   <Repository>nodiaque/steamcmd:enshrouded</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
   <Network>bridge</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>

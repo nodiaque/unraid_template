@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/</Support>
   <Project>https://steampowered.com/</Project>
-  <Overview>This Docker will download and install SteamCMD. It will also install Palworld and run it.&#xD;
+  <Overview>This Docker will download and install SteamCMD. It will also install Enshrouded and run it.&#xD;
 &#xD;
 **Server Name:** Enshrouded Docker  &#xD;
 **Password:** Docker  &#xD;
@@ -40,7 +40,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Config Name="UDP - Gameport" Target="15636" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">15636</Config>
   <Config Name="UDP - Queryport" Target="15637" Default="15637" Mode="udp" Description="UDP Queryport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">15637</Config>
   <Config Name="Game parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Enable Backups" Target="BACKUP" Default="false|true" Mode="" Description="Set this value to 'true' to enable the automated backup function from the container, you find the Backups in '.../palworld/Backups/'. Set to 'false' to disable the backup function." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Enable Backups" Target="BACKUP" Default="false|true" Mode="" Description="Set this value to 'true' to enable the automated backup function from the container, you find the Backups in '/Backups/'. Set to 'false' to disable the backup function." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Backup Interval" Target="BACKUP_INTERVAL" Default="120" Mode="" Description="The backup interval in minutes (ATTENTION: The first backup will be triggered after the set interval in this variable after the start/restart of the container)" Type="Variable" Display="always" Required="true" Mask="false">120</Config>
   <Config Name="Backups to Keep" Target="BACKUPS_TO_KEEP" Default="12" Mode="" Description="Number of backups to keep (by default set to 12 to keep the backups of the last 24 hours)" Type="Variable" Display="always" Required="true" Mask="false">12</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>

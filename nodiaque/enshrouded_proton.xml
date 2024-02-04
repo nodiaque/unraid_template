@@ -16,6 +16,8 @@
 &#xD;
 **Configuration:** Set the variable below accordingly. &#xD;
 &#xD;
+**WARNING:** IF YOU USED MY OTHER ENSHROUDED DOCKER IN WINE, DO NOT USE SAME SERVERFILES MOUNT!&#xD;
+&#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 DO NOT EDIT CONFIG FILE, EVERYTHING IS SET FROM VARIABLES&#xD;
@@ -35,7 +37,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enshrouded</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enshrouded_proton</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2278520 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2278520</Config>
   <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Enshrouded Docker" Mode="" Description="The server name" Type="Variable" Display="always" Required="true" Mask="false">Enshrouded Docker</Config>
   <Config Name="SERVER_PASSWORD" Target="SERVER_PASSWORD" Default="Docker" Mode="" Description="The server password" Type="Variable" Display="always" Required="true" Mask="true">Docker</Config>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="3">
   <Name>Enshrouded_Proton</Name>
   <Repository>nodiaque/steamcmd:enshrouded_proton</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
@@ -13,34 +13,49 @@
 &#xD;
 **Server Name:** Enshrouded Docker  &#xD;
 &#xD;
-**Configuration:** Set the variable below accordingly. &#xD;
+**Configuration:** Set the variable below accordingly and edit the config file.&#xD;
+To edit the config file, start the docker at least once, stop it, edit enshrouded_server.json and then start back again. &#xD;
+By default, there is 3 user group based on default config file with 3 different password. You can delete those you don't want.&#xD;
+&#xD;
+Variables from template will overwrite config file settings (server name, query port and slots)&#xD;
 &#xD;
 **WARNING:** IF YOU USED MY OTHER ENSHROUDED DOCKER IN WINE, DO NOT USE SAME SERVERFILES MOUNT!&#xD;
 &#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-To edit the config file, start the docker at least once, stop it, edit enshrouded_server.json and then start back again. Variables from template will overwrite config file settings.&#xD;
-&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+If upgrading from earlier version, just do the following in the unraid template (keeping them have no effect but is useless):&#xD;
+GAME_PORT WAS REMOVED FROM EARLIER CONFIG FILE. PRESENTLY, THE GAME COPY THAT VALUE OVER QUERY_PORT&#xD;
+Update the following:&#xD;
+QUERY_PORT =&amp;gt; You're current GAME_PORT value (default 15637)&#xD;
+UDP - Queryport =&amp;gt; You're current GAME_PORT value (default 15637, don't forget to recreate the port forward to the new port)&#xD;
+&#xD;
+Remove the following:&#xD;
+Variable: GAME_PORT&#xD;
+Port Forwarding: UPD - GAME_PORT&#xD;
+Variable: SERVER_PASSWORD&#xD;
+&#xD;
+Set your password in the config file (see above)&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/enshrouded_proton.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/enshrouded.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1706822380</DateInstalled>
-  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DateInstalled>1735321447</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enshrouded_proton</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2278520 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2278520</Config>
-  <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Enshrouded Docker" Mode="" Description="The server name" Type="Variable" Display="always" Required="true" Mask="false">Enshrouded Docker</Config>
-  <Config Name="SERVER_SLOTS" Target="SERVER_SLOTS" Default="16" Mode="" Description="The number of player slots" Type="Variable" Display="always" Required="true" Mask="false">16</Config>
-  <Config Name="QUERY_PORT" Target="QUERY_PORT" Default="15637" Mode="" Description="The Query Port used by the server. Don't forget to delete and redo port forwarding for UDP - Queryport if you change" Type="Variable" Display="always" Required="true" Mask="false">15637</Config>
+  <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Enshrouded Docker" Mode="" Description="The server name" Type="Variable" Display="always" Required="true" Mask="false">My Enshrouded Docker</Config>
+  <Config Name="SERVER_SLOTS" Target="SERVER_SLOTS" Default="16" Mode="" Description="The number of player slots" Type="Variable" Display="always" Required="true" Mask="false">8</Config>
+  <Config Name="QUERY_PORT" Target="QUERY_PORT" Default="15636" Mode="" Description="The Query Port used by the server. Don't forget to delete and redo port forwarding for UDP - Queryport of you change" Type="Variable" Display="always" Required="true" Mask="false">15637</Config>
   <Config Name="UDP - Queryport" Target="15637" Default="15637" Mode="udp" Description="UDP Queryport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">15637</Config>
   <Config Name="Game parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Enable Backups" Target="BACKUP" Default="false|true" Mode="" Description="Set this value to 'true' to enable the automated backup function from the container, you find the Backups in '/Backups/'. Set to 'false' to disable the backup function." Type="Variable" Display="always" Required="true" Mask="false">true</Config>

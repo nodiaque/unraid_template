@@ -12,7 +12,6 @@
   <Overview>This Docker will download and install SteamCMD. It will also install Enshrouded and run it using Proton.&#xD;
 &#xD;
 **Server Name:** Enshrouded Docker  &#xD;
-**Password:** Docker  &#xD;
 &#xD;
 **Configuration:** Set the variable below accordingly. &#xD;
 &#xD;
@@ -20,7 +19,7 @@
 &#xD;
 **ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-DO NOT EDIT CONFIG FILE, EVERYTHING IS SET FROM VARIABLES&#xD;
+To edit the config file, start the docker at least once, stop it, edit enshrouded_server.json and then start back again. Variables from template will overwrite config file settings.&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -40,11 +39,8 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enshrouded_proton</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2278520 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2278520</Config>
   <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Enshrouded Docker" Mode="" Description="The server name" Type="Variable" Display="always" Required="true" Mask="false">Enshrouded Docker</Config>
-  <Config Name="SERVER_PASSWORD" Target="SERVER_PASSWORD" Default="Docker" Mode="" Description="The server password" Type="Variable" Display="always" Required="true" Mask="true">Docker</Config>
   <Config Name="SERVER_SLOTS" Target="SERVER_SLOTS" Default="16" Mode="" Description="The number of player slots" Type="Variable" Display="always" Required="true" Mask="false">16</Config>
-  <Config Name="GAME_PORT" Target="GAME_PORT" Default="15636" Mode="" Description="The Game Port used by the server. Don't forget to delete and redo port forwarding for UDP - Gameport of you change" Type="Variable" Display="always" Required="true" Mask="false">15636</Config>
-  <Config Name="QUERY_PORT" Target="QUERY_PORT" Default="15636" Mode="" Description="The Query Port used by the server. Don't forget to delete and redo port forwarding for UDP - Queryport of you change" Type="Variable" Display="always" Required="true" Mask="false">15637</Config>
-  <Config Name="UDP - Gameport" Target="15636" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">15636</Config>
+  <Config Name="QUERY_PORT" Target="QUERY_PORT" Default="15637" Mode="" Description="The Query Port used by the server. Don't forget to delete and redo port forwarding for UDP - Queryport if you change" Type="Variable" Display="always" Required="true" Mask="false">15637</Config>
   <Config Name="UDP - Queryport" Target="15637" Default="15637" Mode="udp" Description="UDP Queryport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">15637</Config>
   <Config Name="Game parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Enable Backups" Target="BACKUP" Default="false|true" Mode="" Description="Set this value to 'true' to enable the automated backup function from the container, you find the Backups in '/Backups/'. Set to 'false' to disable the backup function." Type="Variable" Display="always" Required="true" Mask="false">true</Config>

@@ -14,7 +14,7 @@
 You must have already setup Calibre-Web-Automated for this to work. It is an add-on to it.
 &#xD;
 If you want cloudfare bypass, you must install a docker for it like CloudflarebypassForScraping.&#xD;
-Then, you need to change the value for CLOUDFLARE_PROXY_URL and USE_CF_BYPASS to true.
+Then, you need to change the value for CLOUDFLARE_PROXY_URL and USE_CF_BYPASS to true.&#xD;
 &#x2728; Features&#xD;
 &#x1F310; User-friendly web interface for book search and download&#xD;
 &#x1F504; Automated download to your specified ingest folder&#xD;

@@ -53,7 +53,7 @@ CLOUDFLARE_PROXY_URL is ignored if USE_CF_BYPASS is set to false</Overview>
   <Config Name="AA_BASE_URL" Target="AA_BASE_URL" Default="https://annas-archive.org" Mode="" Description="Base URL of Annas-Archive (could be changed for a proxy). Default: https://annas-archive.org" Type="Variable" Display="always" Required="true" Mask="false">https://annas-archive.org</Config>
   <Config Name="USE_CF_BYPASS" Target="USE_CF_BYPASS" Default="true" Mode="" Description="Disable CF bypass and use alternative links instead. Default: true" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="CLOUDFLARE_PROXY_URL" Target="CLOUDFLARE_PROXY_URL" Default="http://localhost:8000" Mode="" Description="Cloudflare bypass service URL. Default: http://localhost:8000" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8000</Config>
-  <Config Name="AA_DONATOR_KEY" Target="AA_DONATOR_KEY" Default="" Mode="" Description="Optional Donator key for Anna's Archive fast download API" Type="Variable" Display="advanced" Required="false" Mask="false">``</Config>
+  <Config Name="AA_DONATOR_KEY" Target="AA_DONATOR_KEY" Default="" Mode="" Description="Optional Donator key for Anna's Archive fast download API" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="UID" Target="UID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
 </Container>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>CloudflareBypassForScrapping</Name>
+  <Name>CloudflareBypassForScraping</Name>
   <Repository>ghcr.io/sarperavci/cloudflarebypassforscraping:latest</Repository>
   <Registry/>
   <Network>bridge</Network>

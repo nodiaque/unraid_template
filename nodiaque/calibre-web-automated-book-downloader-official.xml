@@ -13,6 +13,8 @@
 &#xD;
 You must have already setup Calibre-Web-Automated for this to work. It is an add-on to it.
 &#xD;
+If you want cloudfare bypass, you must install a docker for it like CloudflarebypassForScraping.&#xD;
+Then, you need to change the value for CLOUDFLARE_PROXY_URL and USE_CF_BYPASS to true.
 &#x2728; Features&#xD;
 &#x1F310; User-friendly web interface for book search and download&#xD;
 &#x1F504; Automated download to your specified ingest folder&#xD;
@@ -39,20 +41,20 @@ CLOUDFLARE_PROXY_URL is ignored if USE_CF_BYPASS is set to false</Overview>
   <Requires/>
   <Config Name="Appdata" Target="/var/log/cwa-book-downloader" Default="/mnt/user/appdata/calibre-web-automated-book-downloader/" Mode="rw" Description="Appdata folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/calibre-web-automated-book-downloader/</Config>
   <Config Name="Container External Port" Target="PORT" Default="8084" Mode="" Description="Container external port. Follow FLASK PORT. Default: 8084" Type="Variable" Display="always" Required="true" Mask="false">8084</Config>  
+  <Config Name="Calibre Web Automated Import Folder" Target="/cwa-book-ingest" Default="/mnt/user/calibre_library/import/" Mode="rw" Description="Mount should align with your Calibre-Web-Automated ingest folder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/calibre_library/import/</Config>
+  <Config Name="Download dir (host)" Target="INGEST_DIR" Default="/cwa-book-ingest" Mode="" Description="Download directory inside the docker. Default: /cwa-book-ingest. If you change this, you must change the path for 'Calibre Web Automated Import Folder'" Type="Variable" Display="always" Required="true" Mask="false">/cwa-book-ingest</Config>
+  <Config Name="MAX_RETRY" Target="MAX_RETRY" Default="3" Mode="" Description="Maximum download retry attempts. Default: 3" Type="Variable" Display="always" Required="true" Mask="false">3</Config>
+  <Config Name="USE_CF_BYPASS" Target="USE_CF_BYPASS" Default="false" Mode="" Description="Disable CF bypass and use alternative links instead. Default: true" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="CLOUDFLARE_PROXY_URL" Target="CLOUDFLARE_PROXY_URL" Default="http://localhost:8000" Mode="" Description="Cloudflare bypass service URL. Default: http://localhost:8000" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8000</Config>
   <Config Name="FLASK PORT" Target="8084" Default="8084" Mode="tcp" Description="Default: 8084" Type="Port" Display="always" Required="true" Mask="false">8084</Config>
   <Config Name="FLASK_PORT" Target="FLASK_PORT" Default="8084" Mode="" Description="FLASK port. If you change this, you need to recreate the " Type="Variable" Display="always" Required="true" Mask="false">8084</Config>
   <Config Name="FLASK_DEBUG" Target="FLASK_DEBUG" Default="false" Mode="" Description="Debug mode toggle. Default: false" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="FLASK_HOST" Target="FLASK_HOST" Default="0.0.0.0" Mode="" Description="Web interface binding. Default: 0.0.0.0" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
-  <Config Name="Calibre Web Automated Import Folder" Target="/cwa-book-ingest" Default="/mnt/user/calibre_library/import/" Mode="rw" Description="Mount should align with your Calibre-Web-Automated ingest folder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/calibre_library/import/</Config>
-  <Config Name="Download dir (host)" Target="INGEST_DIR" Default="/cwa-book-ingest" Mode="" Description="Download directory inside the docker. Default: /cwa-book-ingest. If you change this, you must change the path for 'Calibre Web Automated Import Folder'" Type="Variable" Display="always" Required="true" Mask="false">/cwa-book-ingest</Config>
-  <Config Name="MAX_RETRY" Target="MAX_RETRY" Default="3" Mode="" Description="Maximum download retry attempts. Default: 3" Type="Variable" Display="always" Required="true" Mask="false">3</Config>
   <Config Name="DEFAULT_SLEEP" Target="DEFAULT_SLEEP" Default="5" Mode="" Description="Retry delay (seconds). Default: 5" Type="Variable" Display="always" Required="true" Mask="false">5</Config>
   <Config Name="MAIN_LOOP_SLEEP_TIME" Target="MAIN_LOOP_SLEEP_TIME" Default="5" Mode="" Description="Processing loop delay (seconds)" Type="Variable" Display="always" Required="true" Mask="false">5</Config>
   <Config Name="SUPPORTED_FORMATS" Target="SUPPORTED_FORMATS" Default="epub,mobi,azw3,fb2,djvu,cbz,cbr" Mode="" Description="Supported book formats. PDF is currently not supported. Default: epub,mobi,azw3,fb2,djvu,cbz,cbr" Type="Variable" Display="always" Required="true" Mask="false">epub,mobi,azw3,fb2,djvu,cbz,cbr</Config>
   <Config Name="BOOK_LANGUAGE" Target="BOOK_LANGUAGE" Default="en" Mode="" Description="Preferred language for books. Default: en" Type="Variable" Display="always" Required="true" Mask="false">en</Config>
   <Config Name="AA_BASE_URL" Target="AA_BASE_URL" Default="https://annas-archive.org" Mode="" Description="Base URL of Annas-Archive (could be changed for a proxy). Default: https://annas-archive.org" Type="Variable" Display="always" Required="true" Mask="false">https://annas-archive.org</Config>
-  <Config Name="USE_CF_BYPASS" Target="USE_CF_BYPASS" Default="true" Mode="" Description="Disable CF bypass and use alternative links instead. Default: true" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="CLOUDFLARE_PROXY_URL" Target="CLOUDFLARE_PROXY_URL" Default="http://localhost:8000" Mode="" Description="Cloudflare bypass service URL. Default: http://localhost:8000" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8000</Config>
   <Config Name="AA_DONATOR_KEY" Target="AA_DONATOR_KEY" Default="" Mode="" Description="Optional Donator key for Anna's Archive fast download API" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="UID" Target="UID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>

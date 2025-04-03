@@ -21,7 +21,7 @@
   </Branch>
   <Network>bridge</Network>
   <MyIP/>
-  <Shell>bash</Shell>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/188819-support-nodiaque-evcc/</Support>
   <Project>https://evcc.io/en/</Project>
@@ -51,7 +51,6 @@ Default config put the evcc.yaml at the root of the appdata\evcc folder in unrai
   <Config Name="OCPP Server Port" Target="8887" Default="8887" Mode="tcp" Description="Port used for OCPP Server" Type="Port" Display="always" Required="false" Mask="false">8887</Config>
   <Config Name="Modbus UDP Port" Target="8899" Default="8899" Mode="udp" Description="Modbus UDP Port" Type="Port" Display="always-hide" Required="false" Mask="false">8899</Config>
   <Config Name="EEBus Port" Target="4712" Default="4712" Mode="tcp" Description="EEBus Port" Type="Port" Display="always-hide" Required="false" Mask="false">4712</Config>
-  <Config Name="mDNS Port" Target="5353" Default="5353" Mode="udp" Description="mDNS Port" Type="Port" Display="always-hide" Required="false" Mask="false">5353</Config>
   <Config Name="KEBA Chargers Port" Target="7090" Default="7090" Mode="udp" Description="KEBA Chargers Port" Type="Port" Display="always-hide" Required="false" Mask="false">7090</Config>
   <Config Name="SMA Sunny Home Manager Port" Target="9522" Default="9522" Mode="udp" Description="SMA Sunny Home Manager Port" Type="Port" Display="always-hide" Required="false" Mask="false">9522</Config>
   <Config Name="EVCC Yaml file - Must be created before starting container" Target="/etc/evcc.yaml" Default="/mnt/user/appdata/evcc/evcc.yaml" Mode="rw" Description="Configuration file for the EVCC Server. The file must be created before running the container. Check documentation" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/evcc/evcc.yaml</Config>

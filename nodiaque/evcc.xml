@@ -30,6 +30,9 @@
 You need to create a evcc.yaml file for the docker to work. Follow the instruction here:&#xD;
 https://docs.evcc.io/en/docs/installation/docker&#xD;
 &#xD;
+Easy way is to get the zip file on your computer and run evcc configure --lang en&#xD;
+Then, copy the file in evcc appdata folder&#xD;
+&#xD;
 The file must exist before starting the docker.&#xD;
 &#xD;
 Default config put the evcc.yaml at the root of the appdata\evcc folder in unraid. If you start the docker before creating the file, docker will create a folder named evcc.yaml instead of mapping a file. You will need to delete the folder, create the file and also delete and recreate the mapping else Docker will continue to try to map a folder instead of a file. Unfortunately, the file is mapped in /etc/evcc.yaml so we cannot just map a folder</Overview>

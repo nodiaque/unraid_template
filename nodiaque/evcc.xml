@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Date>2025-04-03</Date>
   <Changes>
-  [center][font size=4]EVCC Official Docker[/font][/center]
-  [b]2025-04-03:[/b] Initial release using official docker
+  [center][font size=4]EVCC Official Docker[/font][/center]&#xD;
+  [b]2025-04-03:[/b] Removed mDNS port forward (5353) as it's in conflict with Unraid mDNS&#xD;
+  [b]2025-04-03:[/b] Initial release using official docker&#xD;
   </Changes>
   <Name>evcc</Name>
-  <Repository>evcc/evcc:latest</Repository>
   <Registry>https://github.com/evcc-io/evcc</Registry>
   <Branch>
 	<Tag>Latest</Tag>
@@ -33,9 +33,12 @@ https://docs.evcc.io/en/docs/installation/docker&#xD;
 Easy way is to get the zip file on your computer and run evcc configure --lang en&#xD;
 Then, copy the file in evcc appdata folder&#xD;
 &#xD;
-The file must exist before starting the docker.&#xD;
+The file must exist before starting the docker or it will start a demo version.&#xD;
 &#xD;
-Default config put the evcc.yaml at the root of the appdata\evcc folder in unraid. If you start the docker before creating the file, docker will create a folder named evcc.yaml instead of mapping a file. You will need to delete the folder, create the file and also delete and recreate the mapping else Docker will continue to try to map a folder instead of a file. Unfortunately, the file is mapped in /etc/evcc.yaml so we cannot just map a folder</Overview>
+Default config put the evcc.yaml at the root of the appdata\evcc folder in unraid. If you start the docker before creating the file, docker will create a folder named evcc.yaml instead of mapping a file. You will need to delete the folder, create the file and also delete and recreate the mapping else Docker will continue to try to map a folder instead of a file. Unfortunately, the file is mapped in /etc/evcc.yaml so we cannot just map a folder&#xD;
+&#xD;
+You can freely remove all port forward after OCPP Port if you don't need them.
+  </Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:7070]/</WebUI>
   <TemplateURL/>

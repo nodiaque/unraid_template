@@ -9,6 +9,7 @@
   </Changes>
   <Name>evcc</Name>
   <Registry>https://github.com/evcc-io/evcc</Registry>
+  <Repository>evcc/evcc:latest</Repository>
   <Branch>
 	<Tag>Latest</Tag>
 	<TagDescription>Latest (recommended)</TagDescription>

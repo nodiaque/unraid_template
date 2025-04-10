@@ -32,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/enshrouded.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/dnl.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/dnl.png</Icon>
   <ExtraParams>--restart=on-failure:5</ExtraParams>
   <PostArgs/>
   <CPUset/>

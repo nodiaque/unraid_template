@@ -4,6 +4,7 @@
   <Date>2025-04-09</Date>
   <Changes>
   [center][font size=4]Snails Dark and Light Docker[/font][/center]&#xD;
+  [b]2025-04-10:[/b] Fixed icon&#xD;
   [b]2025-04-09:[/b] Initial release&#xD;
   </Changes>
   <Name>DNL</Name>
@@ -31,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/enshrouded.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/dnl.png</Icon>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/dnl.jpg</Icon>
   <ExtraParams>--restart=on-failure:5</ExtraParams>
   <PostArgs/>
   <CPUset/>

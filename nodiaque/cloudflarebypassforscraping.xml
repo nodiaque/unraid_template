@@ -9,7 +9,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/184273-support-nodiaque-calibre-web-automated-book-downloader</Support>
   <Project>https://github.com/calibrain/calibre-web-automated-book-downloader</Project>
-  <Overview>Cloudflare  bypass proxy for Calibre Web Automated Book Downloader&#xD;
+  <Overview>This docker isn't needed anymore for Calibre Web Automated Book Downloader and can be deleted&#xD;
+    &#xD;
+    Cloudflare  bypass proxy for Calibre Web Automated Book Downloader&#xD;
 &#xD;
 This is just the cloudfare bypass proxy, you need Calibre Web Automated Book Download to use this.&#xD;
 &#xD;

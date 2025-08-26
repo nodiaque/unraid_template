@@ -1,12 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Beta>False</Beta>
-  <Date>2025-07-31</Date>
-  <Changes>
-  [center][font size=4]Calibre Web Aitomated Book Downloader Official Docker[/font][/center]&#xD;
-  [b]2025-07-31:[/b] Remove CLOUDFLARE_PROXY_URL as it's not used anymore, added several new variableS&#xD;
-  [b]2025-01-25:[/b] Initial release using official docker&#xD;
-  </Changes>
   <Name>calibre-web-automated-book-downloader</Name>
   <Repository>ghcr.io/calibrain/calibre-web-automated-book-downloader:latest</Repository>
   <Registry/>
@@ -44,6 +38,14 @@ CLOUDFLARE_PROXY_URL is ignored if USE_CF_BYPASS is set to false</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires/>
+  <Date>2025-07-31</Date>
+  <Changes>
+### 2025-07-31
+- Remove CLOUDFLARE_PROXY_URL as it's not used anymore, added several new variableS&#xD;
+
+### 2025-01-25
+- Initial release using official docker
+  </Changes>
   <Config Name="Appdata" Target="/var/log/cwa-book-downloader" Default="/mnt/user/appdata/calibre-web-automated-book-downloader/" Mode="rw" Description="Appdata folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/calibre-web-automated-book-downloader/</Config>
   <Config Name="Container External Port" Target="PORT" Default="8084" Mode="" Description="Container external port. Follow FLASK PORT. Default: 8084" Type="Variable" Display="always" Required="true" Mask="false">8084</Config>  
   <Config Name="FLASK PORT" Target="8084" Default="8084" Mode="tcp" Description="Default: 8084" Type="Port" Display="always" Required="true" Mask="false">8084</Config>

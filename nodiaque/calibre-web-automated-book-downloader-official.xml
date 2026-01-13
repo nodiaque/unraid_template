@@ -10,7 +10,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/184273-support-nodiaque-calibre-web-automated-book-downloader/</Support>
   <Project>https://github.com/calibrain/calibre-web-automated-book-downloader/</Project>
-  <Overview>An intuitive web interface for searching and requesting book downloads, designed to work seamlessly with Calibre-Web-Automated. This project streamlines the process of downloading books and preparing them for integration into your Calibre library.&#xD;
+  <Overview>This template was replaced by Shelfmark. Please migrate to shelfmark.
+    
+An intuitive web interface for searching and requesting book downloads, designed to work seamlessly with Calibre-Web-Automated. This project streamlines the process of downloading books and preparing them for integration into your Calibre library.&#xD;
 &#xD;
 You must have already setup Calibre-Web-Automated for this to work. It is an add-on to it.&#xD;
 The docker CloudFlareBypassForScrapping isn't needed anymore and can be remove&#xD;

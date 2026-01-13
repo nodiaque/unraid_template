@@ -8,7 +8,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/184273-support-nodiaque-calibre-web-automated-book-downloader/</Support>
+  <Support>https://forums.unraid.net/topic/196495-support-nodiaque-shelfmark/</Support>
   <Project>https://github.com/calibrain/shelfmark</Project>
   <ReadMe/>
   <Overview>Formerly Calibre Web Automated Book Downloader (CWABD)&#13;
@@ -57,4 +57,5 @@ Calibre Authentication can be use. Check project for instruction on path to add 
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
   <TailscaleStateDir/>
+
 </Container>

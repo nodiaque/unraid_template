@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ocpp2mqtt</Name>
+  <Repository>gyzod/ocpp2mqtt</Repository>
+  <Registry>https://hub.docker.com/r/gyzod/ocpp2mqtt/tags</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/gyzod/ocpp2mqtt/issues</Support>
+  <Project>https://github.com/gyzod/ocpp2mqtt</Project>
+  <ReadMe/>
+  <Overview>ocpp2mqtt is a gateway software that converts OCPP (Open Charge Point Protocol) requests to MQTT (Message Queuing Telemetry Transport) and vice versa. This allows the integration of charging stations with any automation system.</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1768347841</DateInstalled>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <Changes>
+### 2026-01-13
+- Initial release using official docker
+  </Changes>
+  <Requires/>
+  <Config Name="OCPP Port" Target="3000" Default="3000" Mode="tcp" Description="Port mapping for OCPP connection. The host side must match LISTEN_PORT value" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="LISTEN_PORT" Target="LISTEN_PORT" Default="3000" Mode="" Description="Port to listen for incoming OCPP connection. If this is change, you must update the OCPP PORT port forwarding" Type="Variable" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="LISTEN_ADDR" Target="LISTEN_ADDR" Default="0.0.0.0" Mode="" Description="If using multiple NIC, used to bind to a specific address" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="MQTT_PORT" Target="MQTT_PORT" Default="1883" Mode="" Description="Port used for MQTT" Type="Variable" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="MQTT_HOSTNAME" Target="MQTT_HOSTNAME" Default="" Mode="" Description="MQTT server ip address" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MQTT_BASEPATH" Target="MQTT_BASEPATH" Default="ocpp/charger1" Mode="" Description="Basepath to use for mqtt. State and command will be after that" Type="Variable" Display="always" Required="true" Mask="false">ocpp/charger1</Config>
+  <Config Name="MQTT_USERNAME" Target="MQTT_USERNAME" Default="" Mode="" Description="Username to connect to MQTT if required" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT_PASSWORD" Target="MQTT_PASSWORD" Default="" Mode="" Description="Password for MQTT connection" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="MQTT_USESTATIONNAME" Target="MQTT_USESTATIONNAME" Default="" Mode="" Description="Set to true (all lower) to append the station name to the MQTT_BASEPATH. Be sure the basepath end with /" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="AUTHORIZED_TAG_ID_LIST" Target="AUTHORIZED_TAG_ID_LIST" Default="" Mode="" Description="List of station ID that are authorized to charge. You can get this value in your station apps. " Type="Variable" Display="always" Required="true" Mask="false">[""]</Config>
+  <TailscaleStateDir/>
+</Container>

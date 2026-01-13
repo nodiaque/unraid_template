@@ -3,6 +3,14 @@
   <Name>Enshrouded_Proton</Name>
   <Repository>nodiaque/steamcmd:enshrouded_proton</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
+  <Branch>
+    <Tag>enshrouded_proton</Tag>
+    <TagDescription>Release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>enshrouded_proton_test</Tag>
+    <TagDescription>Test</TagDescription>
+  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>

@@ -20,6 +20,11 @@
 	<TagDescription>Nightly (development build)</TagDescription>
 	<Repository>evcc/evcc:nightly</Repository>
   </Branch>
+  <Branch>
+	<Tag>openhab</Tag>
+	<TagDescription>Openhab latest binding supported</TagDescription>
+	<Repository>evcc/evcc:0.206.1</Repository>
+  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -60,3 +65,4 @@ You can freely remove all port forward after OCPP Port if you don't need them.
   <Config Name="EVCC Yaml file - Must be created before starting container" Target="/etc/evcc.yaml" Default="/mnt/user/appdata/evcc/evcc.yaml" Mode="rw" Description="Configuration file for the EVCC Server. The file must be created before running the container. Check documentation" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/evcc/evcc.yaml</Config>
   <Config Name="EVCC DB Folder" Target="/root/.evcc" Default="/mnt/user/appdata/evcc/db/" Mode="rw" Description="Directory for internal database" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/evcc/db/</Config>
 </Container>
+

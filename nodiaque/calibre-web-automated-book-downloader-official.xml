@@ -36,9 +36,8 @@ CLOUDFLARE_PROXY_URL is ignored if USE_CF_BYPASS is set to false</Overview>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1736220010</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires/>
   <Date>2025-07-31</Date>
   <Changes>

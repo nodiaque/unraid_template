@@ -40,7 +40,6 @@ Calibre Authentication can be use. Check project for instruction on path to add 
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1768344567</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
@@ -59,4 +58,5 @@ Calibre Authentication can be use. Check project for instruction on path to add 
   <TailscaleStateDir/>
 
 </Container>
+
 

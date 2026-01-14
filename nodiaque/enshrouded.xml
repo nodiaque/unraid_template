@@ -30,7 +30,6 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1706822380</DateInstalled>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires/>

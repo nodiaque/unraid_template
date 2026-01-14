@@ -52,7 +52,6 @@ You can freely remove all port forward after OCPP Port if you don't need them.
   <ExtraParams>--restart=on-failure:5</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1743686714</DateInstalled>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires/>
@@ -65,4 +64,5 @@ You can freely remove all port forward after OCPP Port if you don't need them.
   <Config Name="EVCC Yaml file - Must be created before starting container" Target="/etc/evcc.yaml" Default="/mnt/user/appdata/evcc/evcc.yaml" Mode="rw" Description="Configuration file for the EVCC Server. The file must be created before running the container. Check documentation" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/evcc/evcc.yaml</Config>
   <Config Name="EVCC DB Folder" Target="/root/.evcc" Default="/mnt/user/appdata/evcc/db/" Mode="rw" Description="Directory for internal database" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/evcc/db/</Config>
 </Container>
+
 

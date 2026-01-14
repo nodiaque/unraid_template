@@ -18,7 +18,6 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1768347841</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Changes>
@@ -37,4 +36,5 @@
   <Config Name="MQTT_USESTATIONNAME" Target="MQTT_USESTATIONNAME" Default="" Mode="" Description="Set to true (all lower) to append the station name to the MQTT_BASEPATH. Be sure the basepath end with /" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="AUTHORIZED_TAG_ID_LIST" Target="AUTHORIZED_TAG_ID_LIST" Default="" Mode="" Description="List of station ID that are authorized to charge. You can get this value in your station apps. " Type="Variable" Display="always" Required="true" Mask="false">[""]</Config>
   <TailscaleStateDir/>
+
 </Container>

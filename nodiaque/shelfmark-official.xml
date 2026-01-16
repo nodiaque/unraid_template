@@ -31,6 +31,8 @@ Cloudflare Bypass - Built-in bypasser for reliable access to protected sources&#
 &#13;
 While most configuration can be set from Env, this make them lock. I included only the recommended one from project.&#13;
 &#13;
+You can add more from the list here (please note they could change without warning): https://github.com/calibrain/shelfmark/blob/main/docs/environment-variables.md&#13;    
+&#13;
 ####################&#13;
 Calibre Authentication can be use. Check project for instruction on path to add and how to use it.</Overview>
   <Category>MediaApp:Books MediaServer:Books</Category>
@@ -58,5 +60,6 @@ Calibre Authentication can be use. Check project for instruction on path to add 
   <TailscaleStateDir/>
 
 </Container>
+
 
 

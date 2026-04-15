@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Windrose</Name>
+  <Repository>nodiaque/steamcmd:windrose</Repository>
+  <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/&amp;lt;</Support>
+  <Project>https://steampowered.com/</Project>
+  <ReadMe/>
+  <Overview>This Docker will download and install SteamCMD. It will also install Windrose and run it on Wine64. &#13;
+&#13;
+**Server Name:** Windrose Docker  &#13;
+**Password:** Docker  &#13;
+&#13;
+**Configuration:** &#13;
+You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
+NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;
+&#13;
+There is 2 configuration file.&#13;
+&#13;
+R5/ServerDescription.json&#13;
+```json&#13;
+{&#13;
+  "Version": 1,&#13;
+  "ServerDescription_Persistent": {&#13;
+    "InviteCode": "xxxxxxxx",&#13;
+    "IsPasswordProtected": true,&#13;
+    "Password": "Docker",&#13;
+    "ServerName": "Windrose Server",&#13;
+    "MaxPlayerCount": 4&#13;
+  }&#13;
+}&#13;
+```&#13;
+&#13;
+To edit World configuration and settings, you edit the file WorldDescription.json. This file will be under a random named folder like R5/Saved/SaveProfiles/Default/RocksDB/&amp;lt;game version&amp;gt;/Worlds/&amp;lt;world document id&amp;gt;/WorldDescription.json&#13;
+Reference: https://steamcommunity.com/sharedfiles/filedetails/?id=3706337486&#13;
+&#13;
+**Update Notice:** Simply restart the container if a newer version of the game is available.    &#13;
+ &#13;
+## Joining a game&#13;
+This game doesn't need port forwarding. It rely on invite code and upnp connectivity to a relay server. Once the server has started, you can catch the invite code in the log.&#13;
+You can also find it in the ServerDescription.json</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/windrose.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose</Config>
+  <TailscaleStateDir/>
+</Container>

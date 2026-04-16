@@ -3,7 +3,7 @@
   <Name>Windrose</Name>
   <Repository>nodiaque/steamcmd:windrose</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -15,6 +15,8 @@
 **Server Name:** Windrose Docker  &#13;
 **Password:** Docker  &#13;
 &#13;
+**Network:**&#13;
+Since this game use upnp with a relay server and no fixed port, you must use host network for it to properly work.&#13;
 **Configuration:** &#13;
 You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
 NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;

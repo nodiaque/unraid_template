@@ -3,6 +3,16 @@
   <Name>Windrose</Name>
   <Repository>nodiaque/steamcmd:windrose</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
+    <Branch>
+    <Tag>Wine</Tag>
+    <TagDescription>Wine (Default)</TagDescription>
+    <Repository>nodiaque/steamcmd:windrose</Repository>
+  </Branch>
+  <Branch>
+    <Tag>Wine + XVFB</Tag>
+    <TagDescription>Beta build</TagDescription>
+    <Repository>nodiaque/steamcmd:windrose-xvfb</Repository>
+  </Branch>
   <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>

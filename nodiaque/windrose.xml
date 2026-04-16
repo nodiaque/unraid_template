@@ -13,7 +13,7 @@
     <TagDescription>Beta build</TagDescription>
     <Repository>nodiaque/steamcmd:windrose-xvfb</Repository>
   </Branch>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -28,7 +28,7 @@
 **Password:** Docker  &#13;
 &#13;
 **Network:**&#13;
-Since this game use upnp with a relay server and no fixed port, you must use host network for it to properly work.&#13;
+Since this game use upnp with a relay server and no fixed portk.&#13;
 **Configuration:** &#13;
 You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
 NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;

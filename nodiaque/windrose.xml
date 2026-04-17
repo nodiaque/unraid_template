@@ -10,7 +10,7 @@
   </Branch>
   <Branch>
     <Tag>Wine + XVFB</Tag>
-    <TagDescription>Beta build</TagDescription>
+    <TagDescription>Wine with xvfb for headless screen</TagDescription>
     <Repository>nodiaque/steamcmd:windrose-xvfb</Repository>
   </Branch>
   <Network>bridge</Network>

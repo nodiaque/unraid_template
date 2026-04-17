@@ -13,7 +13,7 @@
     <TagDescription>Wine with xvfb for headless screen</TagDescription>
     <Repository>nodiaque/steamcmd:windrose-xvfb</Repository>
   </Branch>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -55,7 +55,7 @@ Reference: https://steamcommunity.com/sharedfiles/filedetails/?id=3706337486&#13
 **Update Notice:** Simply restart the container if a newer version of the game is available.    &#13;
  &#13;
 ## Joining a game&#13;
-This game doesn't need port forwarding. It rely on invite code and upnp connectivity to a relay server. Once the server has started, you can catch the invite code in the log.&#13;
+This game doesn't need port forwarding and is more stable using host network. It rely on invite code and upnp connectivity to a relay server. Once the server has started, you can catch the invite code in the log.&#13;
 You can also find it in the ServerDescription.json</Overview>
   <Category>GameServers:</Category>
   <WebUI/>

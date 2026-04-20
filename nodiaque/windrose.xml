@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Windrose</Name>
-  <Repository>nodiaque/steamcmd:windrose</Repository>
+  <Repository>nodiaque/steamcmd:windrose-dev</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -55,15 +55,15 @@ If you don't use the direct port method, you must join using the invite code tha
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1776714379</DateInstalled>
+  <DateInstalled>1776714801</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose</Config>
   <Config Name="Game parameter" Target="GAME_PARAMS" Default="" Mode="" Description="If you change the port or query port, you must change port mapping" Type="Variable" Display="always" Required="false" Mask="false">-MULTIHOME=0.0.0.0 -PORT=7777 -QUERYPORT=7778</Config>
-  <Config Name="Game Port" Target="7777" Default="7777" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
-  <Config Name="Query Port" Target="7778" Default="7778" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7778</Config>
+  <Config Name="Game Port" Target="7777" Default="7777" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Query Port" Target="7778" Default="7778" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7778</Config>
   <Config Name="TailScale Fallback State Directory" Target="CA_TS_FALLBACK_DIR" Default="/serverdata/steamcmd" Mode="{3}" Description="Fallback container directory for tailscale state information - Added By Community Applications" Type="Variable" Display="advanced" Required="{7}" Mask="{8}">/serverdata/steamcmd</Config>
   <TailscaleStateDir/>
 </Container>

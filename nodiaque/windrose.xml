@@ -9,11 +9,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/</Support>
   <Project>https://steampowered.com/</Project>
-  <ReadMe/>
+  <ReadMe>After the first start, you must stop the docker and modify serverdescription.json according to the documentation</ReadMe>
   <Overview>This Docker will download and install SteamCMD. It will also install Windrose and run it on Wine64. &#13;
-&#13;
-**Server Name:** Windrose Docker  &#13;
-**Password:** Docker  &#13;
+** Configuration are required after first run **&#13;
 &#13;
 **Network:**&#13;
 Direct Port:&#13;
@@ -26,12 +24,18 @@ Remove the queryport and port from the game parameter, remove the port binding a
 You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
 NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;
 &#13;
-There is 2 configuration file. Refer to here for help&#13;
-https://playwindrose.com/dedicated-server-guide/&#13;
+There is 2 configuration file. &#13;
+R5/ServerDescription.json is for the server itself (how it run). After first run, you must change these:&#13;
 &#13;
-R5/ServerDescription.json&#13;
+		"IsPasswordProtected": true,&#13;
+		"Password": "yourpassword",&#13;
+		"UseDirectConnection": true,&#13;
+		"DirectConnectionServerPort": 7777,&#13;
 &#13;
 To edit World configuration and settings, you edit the file WorldDescription.json. This file will be under a random named folder like R5/Saved/SaveProfiles/Default/RocksDB/game version/Worlds/world document id/WorldDescription.json&#13;
+&#13;
+Reference:&#13;
+https://playwindrose.com/dedicated-server-guide/&#13;
 &#13;
 **Update Notice:** Simply restart the container if a newer version of the game is available.    &#13;
  &#13;
@@ -44,7 +48,7 @@ If you don't use the direct port method, you must join using the invite code tha
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1776858482</DateInstalled>
+  <DateInstalled>1776859526</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>

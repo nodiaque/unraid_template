@@ -3,16 +3,6 @@
   <Name>Windrose</Name>
   <Repository>nodiaque/steamcmd:windrose-dev</Repository>
   <Registry>https://hub.docker.com/r/nodiaque/steamcmd/</Registry>
-  <Branch>
-    <Tag>Wine</Tag>
-    <TagDescription>Wine (Default)</TagDescription>
-    <Repository>nodiaque/steamcmd:windrose</Repository>
-  </Branch>
-  <Branch>
-    <Tag>Wine + XVFB</Tag>
-    <TagDescription>Wine with xvfb for headless screen</TagDescription>
-    <Repository>nodiaque/steamcmd:windrose-xvfb</Repository>
-  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
@@ -28,31 +18,20 @@
 **Network:**&#13;
 Direct Port:&#13;
 Port used are defined under Game Parameters. If you change them, you must remove and create the port binding.&#13;
+&#13;
 Dyamic Port:&#13;
-Remove the queryport and port from the game parameter, remove the port binding and start using host network.&#13;
+Remove the queryport and port from the game parameter, remove the port binding and start using host network. You must also change serverdescription.json to change "usedirectconnection" from true to false.&#13;
 &#13;
 **Configuration:** &#13;
 You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
 NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;
 &#13;
-There is 2 configuration file.&#13;
+There is 2 configuration file. Refer to here for help&#13;
+https://playwindrose.com/dedicated-server-guide/&#13;
 &#13;
 R5/ServerDescription.json&#13;
-```json&#13;
-{&#13;
-  "Version": 1,&#13;
-  "ServerDescription_Persistent": {&#13;
-    "InviteCode": "xxxxxxxx",&#13;
-    "IsPasswordProtected": true,&#13;
-    "Password": "Docker",&#13;
-    "ServerName": "Windrose Server",&#13;
-    "MaxPlayerCount": 4&#13;
-  }&#13;
-}&#13;
-```&#13;
 &#13;
 To edit World configuration and settings, you edit the file WorldDescription.json. This file will be under a random named folder like R5/Saved/SaveProfiles/Default/RocksDB/game version/Worlds/world document id/WorldDescription.json&#13;
-Reference: https://steamcommunity.com/sharedfiles/filedetails/?id=3706337486&#13;
 &#13;
 **Update Notice:** Simply restart the container if a newer version of the game is available.    &#13;
  &#13;
@@ -65,15 +44,17 @@ If you don't use the direct port method, you must join using the invite code tha
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1776714801</DateInstalled>
+  <DateInstalled>1776858482</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose</Config>
   <Config Name="Game parameter" Target="GAME_PARAMS" Default="" Mode="" Description="If you change the port or query port, you must change port mapping" Type="Variable" Display="always" Required="false" Mask="false">-MULTIHOME=0.0.0.0 -PORT=7777 -QUERYPORT=7778</Config>
-  <Config Name="Game Port" Target="7777" Default="7777" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Game Port UDP" Target="7777" Default="7777" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Game Port TCP" Target="7777" Default="7777" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
   <Config Name="Query Port" Target="7778" Default="7778" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7778</Config>
+  <Config Name="TailScale Fallback State Directory" Target="CA_TS_FALLBACK_DIR" Default="/serverdata/steamcmd" Mode="{3}" Description="Fallback container directory for tailscale state information - Added By Community Applications" Type="Variable" Display="advanced" Required="{7}" Mask="{8}">/serverdata/steamcmd</Config>
   <Config Name="TailScale Fallback State Directory" Target="CA_TS_FALLBACK_DIR" Default="/serverdata/steamcmd" Mode="{3}" Description="Fallback container directory for tailscale state information - Added By Community Applications" Type="Variable" Display="advanced" Required="{7}" Mask="{8}">/serverdata/steamcmd</Config>
   <TailscaleStateDir/>
 </Container>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>redis</Name>
+  <Repository>redis</Repository>
+  <Registry>https://registry.hub.docker.com/_/redis/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/199231-support-nodiaque-redis//Support>
+  <Project>https://redis.io/</Project>
+  <ReadMe/>
+  <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.&#13;
+&#13;
+You must create the config file first located at /mnt/user/appdata/redis/conf/redis.conf.&#13;
+See following link to get the files&#13;
+https://redis.io/docs/latest/operate/oss_and_stack/management/config/&#13;
+&#13;
+If you want to use redis-full.conf, you must change the "Post Arguments" accordingly and refer to https://forums.unraid.net/topic/199231-support-nodiaque-redis/&#13;
+&#13;
+Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/redis.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/redis.png/Icon>
+  <ExtraParams>-e TZ="America/Montreal" --user 99:100</ExtraParams>
+  <PostArgs>redis-server /config/redis.conf</PostArgs>
+  <CPUset/>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <Requires>Config File must be created at appdata/conf/redis.conf (unless you change mapping) https://redis.io/docs/latest/operate/oss_and_stack/management/config/</Requires>
+  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always-hide" Required="true" Mask="{8}">6379</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis/db/</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis/conf/</Config>
+  <TailscaleStateDir/>
+</Container>

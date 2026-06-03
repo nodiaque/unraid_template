@@ -17,13 +17,13 @@ You must create the config file first located at /mnt/user/appdata/redis/conf/re
 See following link to get the files&#13;
 https://redis.io/docs/latest/operate/oss_and_stack/management/config/&#13;
 &#13;
-If you want to use redis-full.conf, you must change the "Post Arguments" accordingly and refer to https://forums.unraid.net/topic/199231-support-nodiaque-redis/&#13;
+If you want to use redis-full.conf, you must change the "Post Arguments" accordingly and refer to https://hub.docker.com/_/redis&#13;
 &#13;
 Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <Category>Network:Management Productivity: Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/redis.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/redis.png/Icon>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/redis.png</Icon>
   <ExtraParams>-e TZ="America/Montreal" --user 99:100</ExtraParams>
   <PostArgs>redis-server /config/redis.conf</PostArgs>
   <CPUset/>

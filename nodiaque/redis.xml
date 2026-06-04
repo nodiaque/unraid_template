@@ -24,7 +24,7 @@ Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/redis.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/redis.png</Icon>
-  <ExtraParams>-e TZ="America/Montreal" --user 99:100</ExtraParams>
+  <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs>redis-server /config/redis.conf</PostArgs>
   <CPUset/>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>

@@ -30,8 +30,8 @@ Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires>Config File must be created at appdata/conf/redis.conf (unless you change mapping) https://redis.io/docs/latest/operate/oss_and_stack/management/config/</Requires>
-  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always-hide" Required="true" Mask="{8}">6379</Config>
-  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis/db/</Config>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redis/conf/</Config>
+  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always" Required="true" Mask="false">6379</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/db/</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/conf/</Config>
   <TailscaleStateDir/>
 </Container>

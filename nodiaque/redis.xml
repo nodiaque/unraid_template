@@ -3,6 +3,12 @@
   <Name>redis</Name>
   <Repository>redis</Repository>
   <Registry>https://registry.hub.docker.com/_/redis/</Registry>
+  <Beta>False</Beta>
+  <Date>2026-06-04</Date>
+  <Changes>
+  [center][font size=4]EVCC Official Docker[/font][/center]&#13;
+  [b]2026-06-04:[/b] Initial release using official docker&#13;
+  </Changes>
   <Network>bridge</Network>
   <MyIP/>
   <MyMAC/>
@@ -18,6 +24,8 @@ See following link to get the files&#13;
 https://redis.io/docs/latest/operate/oss_and_stack/management/config/&#13;
 &#13;
 If you want to use redis-full.conf, you must change the "Post Arguments" accordingly and refer to https://hub.docker.com/_/redis&#13;
+&#13;
+There's currently a bug with the template the path for /config isn't properly set. It must be /mnt/user/appdata/redis/conf/&#13;
 &#13;
 Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <Category>Network:Management Productivity: Tools:Utilities</Category>

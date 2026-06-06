@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pihole</Name>
+  <Repository>pihole/pihole:latest</Repository>
+  <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
+  <Network>Bridge</Network>
+  <MyIP>192.168.1.24</MyIP>
+  <MyMAC/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/199290-support-nodiaque-pihole/</Support>
+  <Project/>
+  <ReadMe/>
+  <Overview>&#13;
+    Pi-Hole - let's block those pesky ads!&#13;
+&#13;
+&#13;
+    This is a template for the official PiHole Docker&#13;
+&#13;
+    Easiest way to setup is using a custom network for eth, select it in network and enter custom IP on your network.&#13;
+&#13;
+    You can also use bridge mode.&#13; You cannot use host mode since Unraid is already listening on the DNS ports.&#13;
+&#13;
+	Don't forget to change the fixed ip address in the template for your ip and the ServerIP environment variable.&#13;
+&#13;
+    Also, if you set you router to give out the PiHole address to clients,&#13;
+&#13;
+    make sure that you fix the unRaid servers dns to point to a real DNS Server.&#13;
+&#13;
+	Please check https://hub.docker.com/r/pihole/pihole for additional variables that you may need.&#13;
+&#13;
+  </Overview>
+  <Category>Network:Other Other:</Category>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/pihole.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/pihole.png</Icon>
+  <ExtraParams>--restart=unless-stopped  --cap-add=NET_ADMIN --hostname=pihole</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <Requires/>
+  <Config Name="TCP DNS Port" Target="53" Default="53" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="UDP DNS Port" Target="53" Default="53" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="Required Port" Target="67" Default="67" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">67</Config>
+  <Config Name="HTTP port" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="443" Default="443" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="Host Pihole directory" Target="/etc/pihole/" Default="/mnt/user/appdata/pihole/pihole/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole/pihole/</Config>
+  <Config Name="Host dnsmasq directory" Target="/etc/dnsmasq.d/" Default="/mnt/user/appdata/pihole/dnsmasq.d/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole/dnsmasq.d/</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Montreal" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/Montreal</Config>
+  <Config Name="WEBPASSWORD" Target="WEBPASSWORD" Default="admin" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true">4tVBg53qM0sxL5IVT4RI</Config>
+  <Config Name="INTERFACE" Target="INTERFACE" Default="br0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">eth0</Config>
+  <Config Name="ServerIP" Target="ServerIP" Default="192.168.1.24" Mode="" Description="Set to your Pihole containers LAN IP, used by web block modes and lighttpd bind address" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.24</Config>
+  <Config Name="ServerIPv6" Target="ServerIPv6" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPv6" Target="IPv6" Default="False" Mode="" Description="For unraid compatibility, strips out all the IPv6 configuration from DNS/Web services when false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="DNSMASQ_LISTENING" Target="DNSMASQ_LISTENING" Default="all" Mode="" Description="local listens on all local subnets, all permits listening on internet origin subnets in addition to local, single listens only on the interface specified." Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="WEBUI BOXED LAYOUT" Target="WEBUIBOXEDLAYOUT" Default="boxed" Mode="" Description="Use boxed layout (helpful when working on large screens)" Type="Variable" Display="always" Required="false" Mask="false">boxed</Config>
+  <Config Name="PIHOLE_UID" Target="PIHOLE_UID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PIHOLE_GID" Target="PIHOLE_GID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <TailscaleStateDir/>
+</Container>

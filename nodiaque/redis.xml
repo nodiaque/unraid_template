@@ -39,7 +39,7 @@ Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Requires>Config File must be created at appdata/conf/redis.conf (unless you change mapping) https://redis.io/docs/latest/operate/oss_and_stack/management/config/</Requires>
   <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always" Required="true" Mask="false">6379</Config>
-  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/db/</Config>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/conf/</Config>
+  <Config Name="Database dumb folder" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/db/</Config>
+  <Config Name="Config folder" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/conf/</Config>
   <TailscaleStateDir/>
 </Container>

@@ -10,8 +10,6 @@
   [b]2026-06-04:[/b] Initial release using official docker&#13;
   </Changes>
   <Network>bridge</Network>
-  <MyIP/>
-  <MyMAC/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/199231-support-nodiaque-redis/</Support>
@@ -37,7 +35,7 @@ Be sure to chmod to nobody:users the appdata folder and all files.</Overview>
   <CPUset/>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <DonateText>If you like my work please consider Donating.</DonateText>
-  <Requires>Config File must be created at appdata/conf/redis.conf (unless you change mapping) https://redis.io/docs/latest/operate/oss_and_stack/management/config/</Requires>
+  <Requires>Config File must be created at appdata/conf/redis.conf (unless you change mapping) https://redis.io/docs/latest/operate/oss_and_stack/management/config/. There's currently a bug with the template the path for /config isn't properly set. It must be /mnt/user/appdata/redis/conf/</Requires>
   <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always" Required="true" Mask="false">6379</Config>
   <Config Name="Database dumb folder" Target="/data" Default="/mnt/user/appdata/redis/db/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/db/</Config>
   <Config Name="Config folder" Target="/config" Default="/mnt/user/appdata/redis/conf/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/conf/</Config>

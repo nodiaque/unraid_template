@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Windrose-Linux</Name>
+  <Repository>nodiaque/windrose:latest</Repository>
+  <Registry>https://hub.docker.com/r/nodiaque/windrose/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/151809-support-nodiaque-gameserver-docker/</Support>
+  <Project>https://steampowered.com/</Project>
+  <ReadMe/>
+  <Overview>** Configuration are required after first run **&#13;
+&#13;
+**Network:**&#13;
+Direct Port:&#13;
+Port used are defined under Game Parameters. If you change them, you must remove and create the port binding.&#13;
+&#13;
+**Configuration:** &#13;
+You must wait for the game to be fully initialize once, then shutdown the server to modify the config file.&#13;
+NEVER MODIFY WHILE THE CONTAINER IS RUNNING.&#13;
+&#13;
+There is 2 configuration file. &#13;
+R5/ServerDescription.json is for the server itself (how it run). After first run, you must change these:&#13;
+&#13;
+		"IsPasswordProtected": true,&#13;
+		"Password": "yourpassword",&#13;
+		"UseDirectConnection": true,&#13;
+		"DirectConnectionServerPort": 7777,&#13;
+&#13;
+To edit World configuration and settings, you edit the file WorldDescription.json. This file will be under a random named folder like R5/Saved/SaveProfiles/Default/RocksDB/game version/Worlds/world document id/WorldDescription.json&#13;
+&#13;
+Reference:&#13;
+https://playwindrose.com/dedicated-server-guide/&#13;
+&#13;
+**Update Notice:** Since this docker is manually updated using extracted files, update will require time from the maintener.&#13;
+ </Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/windrose-linux.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/nodiaque/unraid_template/master/nodiaque/images/windrose.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://paypal.me/nodiaque</DonateLink>
+  <Requires>Create the file /mnt/cache/appdata/windrose-linux/ServerDescription.json (empty) before first run</Requires>
+  <Config Name="Savegame Data" Target="/serverdata/R5/Saved" Default="/mnt/user/appdata/windrose-linux/Saved" Mode="rw" Description="Savegame data" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose-linux/Saved</Config>
+  <Config Name="Config File" Target="/serverdata/R5/ServerDescription.json" Default="/mnt/user/appdata/windrose-linux/ServerDescription.json" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose-linux/ServerDescription.json</Config>
+  <Config Name="Game Port UDP" Target="7777" Default="7777" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Game Port TCP" Target="7777" Default="7777" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Query Port" Target="7778" Default="7778" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7778</Config>
+  <TailscaleStateDir/>
+</Container>

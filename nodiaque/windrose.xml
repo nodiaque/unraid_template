@@ -62,7 +62,7 @@ If you don't use the direct port method, you must join using the invite code tha
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windrose</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/windrose</Config>
   <Config Name="Game parameter" Target="GAME_PARAMS" Default="" Mode="" Description="If you change the port or query port, you must change port mapping" Type="Variable" Display="always" Required="false" Mask="false">-MULTIHOME=0.0.0.0 -PORT=7777 -QUERYPORT=7778</Config>
   <Config Name="Game Port UDP" Target="7777" Default="7777" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
   <Config Name="Game Port TCP" Target="7777" Default="7777" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7777</Config>

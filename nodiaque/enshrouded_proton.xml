@@ -60,7 +60,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateLink>https://paypal.me/nodiaque</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enshrouded_proton</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/enshrouded_proton</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2278520 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2278520</Config>
   <Config Name="SERVER_NAME" Target="SERVER_NAME" Default="Enshrouded Docker" Mode="" Description="The server name" Type="Variable" Display="always" Required="true" Mask="false">My Enshrouded Docker</Config>
   <Config Name="SERVER_SLOTS" Target="SERVER_SLOTS" Default="16" Mode="" Description="The number of player slots" Type="Variable" Display="always" Required="true" Mask="false">8</Config>
